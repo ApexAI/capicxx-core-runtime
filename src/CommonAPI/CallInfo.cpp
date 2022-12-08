@@ -5,6 +5,7 @@
 
 #include <CommonAPI/CallInfo.hpp>
 #include <CommonAPI/Runtime.hpp>
+#include <cstdlib>
 
 namespace CommonAPI {
 
