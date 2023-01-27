@@ -84,7 +84,8 @@ public:
 
 private:
     class LoggerImpl;
-    COMMONAPI_METHOD_EXPORT static std::shared_ptr<LoggerImpl> getLoggerImpl();
+
+    COMMONAPI_METHOD_EXPORT static LoggerImpl& getLoggerInstance();
 
     COMMONAPI_METHOD_EXPORT static bool isLogged(Level _level);
     COMMONAPI_METHOD_EXPORT static void doLog(Level _level, const std::string& _message);
