@@ -31,7 +31,7 @@ void trim(std::string& toTrim) {
         std::find_if(
             toTrim.begin(),
             toTrim.end(),
-            std::not1(std::ptr_fun(isspace))
+            [](unsigned char ch) { return !std::isspace(ch); }
         )
     );
 
@@ -39,7 +39,7 @@ void trim(std::string& toTrim) {
         std::find_if(
             toTrim.rbegin(),
             toTrim.rend(),
-            std::not1(std::ptr_fun(isspace))).base(),
+            [](unsigned char ch) { return !std::isspace(ch); }).base(),
             toTrim.end()
     );
 }
