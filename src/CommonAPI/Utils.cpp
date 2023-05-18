@@ -32,7 +32,7 @@ void trim(std::string& toTrim) {
         std::find_if(
             toTrim.begin(),
             toTrim.end(),
-            [](int c) {return !std::isspace(c);}
+            [](unsigned char ch) { return !std::isspace(ch); }
         )
     );
 
@@ -40,9 +40,10 @@ void trim(std::string& toTrim) {
         std::find_if(
             toTrim.rbegin(),
             toTrim.rend(),
-            [](int c) {return !std::isspace(c);}).base(),
+            [](unsigned char ch) { return !std::isspace(ch); }).base(),
             toTrim.end()
     );
 }
 
-}//namespace CommonAPI
+} //namespace CommonAPI
+
