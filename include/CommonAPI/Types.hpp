@@ -90,7 +90,7 @@ typedef std::string ConnectionId_t;
 typedef int Timeout_t; // in ms, -1 means "forever"
 typedef uint32_t Sender_t;
 
-#if defined(_WIN32) || defined(__QNX__)
+#if defined(_WIN32)
 typedef std::uint32_t uid_t;
 typedef std::uint32_t gid_t;
 #else
